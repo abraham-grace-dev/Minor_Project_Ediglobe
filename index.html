@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Exception Management Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Delivery  Dashboard</h1>
+
+    <div class="card">
+        <h3>Filters</h3>
+
+        <select id="filterIssueType">
+            <option value="All">All Issue Types</option>
+            <option value="Address Not Found">Address Not Found</option>
+            <option value="Customer Not Available">Customer Not Available</option>
+            <option value="Payment Issue">Payment Issue</option>
+            <option value="Package Damaged">Package Damaged</option>
+        </select>
+
+        <select id="filterStatus">
+            <option value="All">All Status</option>
+            <option value="Open">Open</option>
+            <option value="Resolved">Resolved</option>
+        </select>
+    </div>
+
+    <div class="card">
+        <h3>Report Delivery Issue</h3>
+
+        <form id="exceptionForm">
+
+            <div class="form-grid">
+
+                <input
+                        type="text"
+                        id="deliveryId"
+                        placeholder="Delivery ID"
+                        required
+                >
+
+                <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Customer Name"
+                        required
+                >
+
+                <select id="issueType" required>
+                    <option value="">Select Issue Type</option>
+                    <option value="Address Not Found">Address Not Found</option>
+                    <option value="Customer Not Available">Customer Not Available</option>
+                    <option value="Payment Issue">Payment Issue</option>
+                    <option value="Package Damaged">Package Damaged</option>
+                </select>
+
+                <div class="priority">
+                    <label>
+                        <input type="radio" name="priority" value="Low" required>
+                        Low
+                    </label>
+
+                    <label>
+                        <input type="radio" name="priority" value="Medium">
+                        Medium
+                    </label>
+
+                    <label>
+                        <input type="radio" name="priority" value="High">
+                        High
+                    </label>
+                </div>
+
+                <textarea
+                        id="notes"
+                        placeholder="Notes (Optional)"
+                ></textarea>
+
+            </div>
+
+            <button type="submit">Report Issue</button>
+
+        </form>
+    </div>
+
+    <div class="card">
+        <h3>Reported Exceptions</h3>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Delivery ID</th>
+                <th>Customer Name</th>
+                <th>Issue Type</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+
+            <tbody id="exceptionTableBody">
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
