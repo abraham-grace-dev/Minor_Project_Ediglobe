@@ -95,8 +95,6 @@ Implementing filters and UI state changes
 
 Following real-world frontend constraints
 
-📸 Screenshots (Optional)
-Add screenshots of the dashboard here if needed.
 
 📄 License
 This project is for educational and practice purposes only.
