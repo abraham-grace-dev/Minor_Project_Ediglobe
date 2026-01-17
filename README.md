@@ -1,4 +1,4 @@
-# Delivery Exception Management Dashboard
+# Delivery Dashboard
 
 A simple internal web dashboard built using **HTML, CSS, and JavaScript** to log, track, and manage delivery exceptions for operations teams.
 
